@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvDCA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="-20dp"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/btnarrow"
+        android:background="#7BD37F"
+        android:padding="20dp"
+        android:text="@string/dca" />
+
+    <TextView
+        android:id="@+id/tvMARS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-20dp"
+        android:layout_toEndOf="@+id/btnarrow"
+        android:background="#7BD37F"
+        android:padding="20dp"
+        android:text="MARS" />
+
+    <Button
+        android:id="@+id/btnarrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="➡️⬅️" />
+
+    <Switch
+
+        android:id="@+id/mn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/tvDCA"
+        android:layout_margin="20dp"
+        android:background="#DAA914"
+        android:padding="20dp"
+        android:text="One Way"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/Trav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mn"
+
+
+        android:layout_margin="30dp"
+
+        android:background="#DAA914"
+        android:padding="20dp"
+        android:text="1 Traveller" />
+
+
+</RelativeLayout>
