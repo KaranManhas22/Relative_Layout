@@ -1,68 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/satellite"
+        android:id="@+id/station"
+        app:layout_constraintBottom_toTopOf="@+id/arr"
+        app:layout_constraintEnd_toEndOf="@+id/v_dp_60"
+        app:layout_constraintStart_toStartOf="@+id/v_dp_40"
+        app:layout_constraintTop_toTopOf="@+id/h_dp_25"
+        />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/technology"
+        app:layout_constraintTop_toBottomOf="@+id/tvDCA"
+        app:layout_constraintStart_toStartOf="@+id/v_dp_15"
+        app:layout_constraintEnd_toEndOf="@id/v_dp_35"
+        app:layout_constraintBottom_toBottomOf="@id/h_dp_40"
+
+      app:layout_constraintTop_toTopOf="@id/h_dp_25"
+        />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/rovers"
+        app:layout_constraintEnd_toEndOf="@+id/v_dp_85"
+        app:layout_constraintStart_toStartOf="@id/v_dp_65"
+        app:layout_constraintTop_toTopOf="@+id/h_dp_25"
+        app:layout_constraintBottom_toBottomOf="@id/h_dp_40"
+        app:layout_constraintBottom_toTopOf="@+id/tvMARS"/>
 
 
+
+    <ImageView
+        android:id="@+id/arr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="10dp"
+        android:src="@drawable/double_arrows"
+        app:layout_constraintBottom_toBottomOf="@+id/h_dp_60"
+        app:layout_constraintEnd_toEndOf="@+id/v_dp_60"
+        app:layout_constraintStart_toStartOf="@+id/v_dp_40"
+        app:layout_constraintTop_toTopOf="@id/h_dp_40"
+        />
 
     <TextView
         android:id="@+id/tvDCA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="-20dp"
-        android:layout_centerInParent="true"
-        android:layout_toStartOf="@+id/btnarrow"
         android:background="#7BD37F"
-        android:padding="20dp"
-        android:text="@string/dca" />
+        android:padding="50dp"
+        android:text="@string/dca"
+        app:layout_constraintBottom_toBottomOf="@+id/h_dp_60"
+        app:layout_constraintEnd_toStartOf="@+id/arr"
+        app:layout_constraintTop_toTopOf="@+id/h_dp_40" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".15" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".25" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".65" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".35" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".75" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".85" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_dp_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="631dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_dp_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v_dp_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".6" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_dp_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h_dp_60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".6" />
 
     <TextView
         android:id="@+id/tvMARS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_marginLeft="-20dp"
-        android:layout_toEndOf="@+id/btnarrow"
         android:background="#7BD37F"
-        android:padding="20dp"
-        android:text="MARS" />
+        android:padding="50dp"
+        android:text="MARS"
+        app:layout_constraintBottom_toBottomOf="@id/h_dp_60"
+        app:layout_constraintStart_toEndOf="@+id/arr"
+        app:layout_constraintTop_toTopOf="@+id/h_dp_40" />
 
-    <Button
-        android:id="@+id/btnarrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="➡️⬅️" />
-
-    <Switch
+    <com.google.android.material.materialswitch.MaterialSwitch
 
         android:id="@+id/mn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_below="@+id/tvDCA"
         android:layout_margin="20dp"
         android:background="#DAA914"
         android:padding="20dp"
         android:text="One Way"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+        app:layout_constraintEnd_toEndOf="@+id/v_dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDCA" />
 
     <TextView
         android:id="@+id/Trav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/mn"
-
-
-        android:layout_margin="30dp"
-
+        android:layout_margin="20dp"
         android:background="#DAA914"
         android:padding="20dp"
-        android:text="1 Traveller" />
+        android:text="1 Traveller"
+        app:layout_constraintEnd_toEndOf="@+id/v_dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mn" />
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
